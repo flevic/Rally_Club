@@ -13,8 +13,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
 
-public class PrometeoCarController : MonoBehaviour
+public class PrometeoCarController : NetworkBehaviour
 {
     public Transform startPosition;
 
@@ -266,6 +267,9 @@ public class PrometeoCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!IsOwner) {    return;}
+
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = new Vector3(201, 11, 89);
