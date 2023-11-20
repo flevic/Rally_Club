@@ -267,12 +267,13 @@ public class PrometeoCarController : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner) {    return;}
+        
 
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            transform.position = new Vector3(201, 11, 89);
+            transform.position = new Vector3(0, 0, 0);
+            carRigidbody.velocity = Vector3.zero;
             transform.rotation = Quaternion.identity;
             
         }
