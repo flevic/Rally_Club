@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2d8a19c7ee37b8b419b9098ae1c820b1
+  - enabled: 1
+    path: Assets/Scenes/LevelPicker.unity
+    guid: 7bd827d2c0937664b9b03cc00977ec32
+  - enabled: 1
+    path: Assets/Scenes/Graphics.unity
+    guid: 9f6f22e0192dbf74982a9963772d2ba0
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 083f79a9b4ae18c49b23d8ec62f64f5b
+  - enabled: 1
     path: Assets/PROMETEO - Car Controller/Scenes/Demo.unity
     guid: d05c07244ed6a3740be3bdad186521e6
   m_configObjects:
