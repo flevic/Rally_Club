@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 public class PrometeoCarController : NetworkBehaviour
 {
@@ -267,8 +268,12 @@ public class PrometeoCarController : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Load the specified scene.
+            SceneManager.LoadScene("MainMenu");
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
