@@ -360,6 +360,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4161511846349296256, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4161511846349296260, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_ClearFlags
       value: 1
@@ -497,6 +501,7 @@ PrefabInstance:
     - {fileID: 3263225578955567746, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
     - {fileID: 278065763839430689, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
     - {fileID: 147273671147789309, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+    - {fileID: 4161511846349296261, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
 --- !u!4 &3300382856570513165 stripped
 Transform:

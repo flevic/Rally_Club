@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader1 : MonoBehaviour
 {
-     // Name of the scene to load.
-
+    // Name of the scene to load.
+    public string Scene;
     // This method gets called when something enters the trigger area.
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +15,7 @@ public class SceneLoader1 : MonoBehaviour
         {
             Debug.Log("Load");
             // Load the specified scene.
-            SceneManager.LoadScene("Level1");
-        }
+            SceneManager.LoadScene(Scene);
+        } 
     }
 }

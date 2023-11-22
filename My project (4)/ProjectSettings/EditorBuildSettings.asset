@@ -15,11 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Graphics.unity
     guid: 9f6f22e0192dbf74982a9963772d2ba0
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level6.unity
     guid: 083f79a9b4ae18c49b23d8ec62f64f5b
   - enabled: 1
     path: Assets/PROMETEO - Car Controller/Scenes/Demo.unity
     guid: d05c07244ed6a3740be3bdad186521e6
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 02223d63f1e90c74eac827ac0e99fb7d
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 717eb374a3ad0a149abc41cb580f027b
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 47d5ebb5305dc7347af818d7b6d208a7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f4599d807db47fe4585d6ef83b039d39, type: 2}
