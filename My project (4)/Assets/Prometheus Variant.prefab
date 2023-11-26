@@ -1526,9 +1526,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6811219751441086579, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: MaxDistance
+      value: 21.787449
+      objectReference: {fileID: 0}
+    - target: {fileID: 6811219751441086579, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: MinDistance
+      value: 21.787447
+      objectReference: {fileID: 0}
+    - target: {fileID: 6811219751441086579, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7495e1271862af64296c25307f1c6a8a, type: 3}
+    - target: {fileID: 6811219751441086579, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7403266524860452459, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_Enabled
       value: 1
