@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: be758b01a9cf22e48abd44f52053697e
+  m_OcclusionCullingData: {fileID: 36300000, guid: 089aa65b558f8b744b2032bc9e5a523c, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2634.649, g: 4055.4504, b: 7282.4785, a: 1}
+  m_IndirectSpecularColor: {r: 2816.0132, g: 2138.5806, b: 2362.6587, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2651,8 +2651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 0}
-  rotationSpeed: 5
-  rotationLerpFactor: 0.1
+  camHeight: 1
+  camDistance: 1
 --- !u!45 &1466207018
 Skybox:
   m_ObjectHideFlags: 0
@@ -2746,6 +2746,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2507784098810561307, guid: 4fb345d9b76760341a9abd0f9ae82618, type: 3}
   m_PrefabInstance: {fileID: 506452153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1582228501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3300382856570513165, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+  m_PrefabInstance: {fileID: 1694767845}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1627900745
 Mesh:
@@ -2954,6 +2959,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prometheus Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3046660708812643362, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046660708812643371, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1582228501}
+    - target: {fileID: 3046660708812643371, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camHeight
+      value: 3.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046660708812643371, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camDistance
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3046660708812643372, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_CustomSkybox
       value: 
@@ -3034,6 +3055,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5139234882934535600, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1582228501}
+    - target: {fileID: 5139234882934535600, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camHeight
+      value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139234882934535600, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139234882934535600, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camDistance
+      value: -0.92
+      objectReference: {fileID: 0}
     - target: {fileID: 5548735435239667416, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_Pitch
       value: 0.5
@@ -3045,6 +3082,42 @@ PrefabInstance:
     - target: {fileID: 5548735435239667416, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601783445153430658, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987836808970587979, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 1582228501}
+    - target: {fileID: 7987836808970587979, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987836808970587979, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: camDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465020321861161721, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.953717
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.30070576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1619669547601304921, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
