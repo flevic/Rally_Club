@@ -47,6 +47,7 @@ public class PrometeoCarController : NetworkBehaviour
     [Space(10)]
     public Transform startPosition;
     [Space(10)]
+
                                  // in the points x = 0 and z = 0 of your car. You can select the value that you want in the y axis,
                                                                      // however, you must notice that the higher this value is, the more unstable the car becomes.
                                                                      // Usually the y value goes from 0 to 1.5.
