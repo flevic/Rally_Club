@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6d3ff905719c845a4a6404bc4d4162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 0}
+  car: {fileID: 3300382856570513165}
   camHeight: 10
   camDistance: 15
 --- !u!114 &7919143195062038791
@@ -1497,6 +1497,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4161511846349296256, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 3300382856570513165}
     - target: {fileID: 4161511846349296256, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: camHeight
       value: 3.23

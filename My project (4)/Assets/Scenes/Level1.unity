@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2597.6382, g: 1834.7275, b: 1679.877, a: 1}
+  m_IndirectSpecularColor: {r: 2800.019, g: 2145.0024, b: 2422.642, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3192,6 +3192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
+      propertyPath: Scene
+      value: LevelPicker
+      objectReference: {fileID: 0}
     - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 

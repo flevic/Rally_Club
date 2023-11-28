@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameObjectChecker : MonoBehaviour
 {
     public GameObject[] gameObjects;
+    public string Scene;
 
     void Update()
     {
@@ -13,7 +14,7 @@ public class GameObjectChecker : MonoBehaviour
         if (AllGameObjectsNotExist())
         {
             // Do something when none of the game objects exist
-            SceneManager.LoadScene("LevelPicker");
+            SceneManager.LoadScene(Scene);
         }
     }
 
