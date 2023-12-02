@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2800.019, g: 2145.0024, b: 2422.642, a: 1}
+  m_IndirectSpecularColor: {r: 2820.7212, g: 2130.7876, b: 2331.668, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2733,15 +2733,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466207010}
-  m_LocalRotation: {x: 0.23951752, y: 0.7205445, z: -0.2984593, w: 0.5782465}
-  m_LocalPosition: {x: 537.4, y: 26.7, z: 109.4}
+  m_LocalRotation: {x: 0.14224426, y: 0.5648625, z: -0.09960049, w: 0.8067074}
+  m_LocalPosition: {x: -17.71, y: 7.9, z: -6.3}
   m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0.79999995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1225531907}
   m_Father: {fileID: 0}
   m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 45, y: 102.505, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 70, z: 0}
 --- !u!1 &1555573955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2507784098810561307, guid: 4fb345d9b76760341a9abd0f9ae82618, type: 3}
@@ -2973,7 +2973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3046660708812643371, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: camDistance
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3046660708812643372, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_CustomSkybox
@@ -3109,15 +3109,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.953717
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.30070576
+      value: 0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 8515575194552041104, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 35
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1619669547601304921, guid: 73d76e227022640468a8ed3a8d8469e8, type: 3}
