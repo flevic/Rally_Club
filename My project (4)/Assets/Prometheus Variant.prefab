@@ -1500,7 +1500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260370880855710189, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1260370880855710189, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: MaxDistance
@@ -1713,6 +1713,10 @@ PrefabInstance:
     - target: {fileID: 4709221321914802738, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828631021219714018, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4991986843683687946, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_LocalPosition.x
