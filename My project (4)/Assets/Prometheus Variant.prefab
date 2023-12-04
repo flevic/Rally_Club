@@ -667,6 +667,7 @@ MonoBehaviour:
   car: {fileID: 0}
   camHeight: 1
   camDistance: 1
+  rotationOffset: 0
 --- !u!114 &8713955503945232864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,8 +1014,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 3300382856570513165}
-  camHeight: 10
-  camDistance: 8
+  camHeight: 16
+  camDistance: 18
+  rotationOffset: -30
 --- !u!114 &7919143195062038791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,6 +1595,10 @@ PrefabInstance:
     - target: {fileID: 4161511846349296256, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: camDistance
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161511846349296256, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
+      propertyPath: rotationOffset
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 4161511846349296260, guid: 981cf2b02cd607c469541675f28adac3, type: 3}
       propertyPath: m_HDR
