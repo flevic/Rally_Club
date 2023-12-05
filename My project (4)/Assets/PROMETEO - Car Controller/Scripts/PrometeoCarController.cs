@@ -45,7 +45,8 @@ public class PrometeoCarController : NetworkBehaviour
     [Space(10)]
     public Vector3 bodyMassCenter; // This is a vector that contains the center of mass of the car. I recommend to set this value
     [Space(10)]
-    public Transform startPosition;
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
     [Space(10)]
 
                                  // in the points x = 0 and z = 0 of your car. You can select the value that you want in the y axis,
@@ -167,7 +168,9 @@ public class PrometeoCarController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Check if the startPosition is assigned
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
         //In this part, we set the 'carRigidbody' value with the Rigidbody attached to this
         //gameObject. Also, we define the center of mass of the car with the Vector3 given
         //in the inspector.
@@ -282,10 +285,14 @@ public class PrometeoCarController : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            transform.position = new Vector3(0, 0, 0);
+            transform.position = initialPosition;
+            transform.rotation = initialRotation;
             carRigidbody.velocity = Vector3.zero;
-            transform.rotation = Quaternion.identity;
             
+            //transform.position = new Vector3(0, 0, 0);
+            //carRigidbody.velocity = Vector3.zero;
+            //transform.rotation = Quaternion.identity;
+
         }
         //CAR DATA
 
