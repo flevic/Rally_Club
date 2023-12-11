@@ -85,7 +85,7 @@ public class MenuController : MonoBehaviour
     public void Back()
     {
         // Load the "GameScene" when the Start button is pressed.
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Settings");
     }
 
     void DropdownValueChanged(TMP_Dropdown change)

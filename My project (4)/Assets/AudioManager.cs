@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
     private AudioSource musicSource;
+    public AudioMixerGroup audioMixerGroup;  
 
     public AudioClip[] musicClips; // List of music clips
 
@@ -19,6 +22,7 @@ public class AudioManager : MonoBehaviour
 
             // Attach AudioSource to AudioManager
             musicSource = gameObject.AddComponent<AudioSource>();
+            musicSource.outputAudioMixerGroup = audioMixerGroup;
             // Set other AudioSource properties
             musicSource.loop = true;
 
@@ -38,5 +42,9 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject); // Destroy any additional AudioManager instances
         }
+        // Function to set the music volume
+       
+
     }
+  
 }

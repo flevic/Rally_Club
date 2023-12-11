@@ -19,7 +19,7 @@ public class SceneController : MonoBehaviour
     public void Settings()
     {
         // Load the "GameScene" when the Start button is pressed.
-        SceneManager.LoadScene("Graphics");
+        SceneManager.LoadScene("Settings");
     }
     public void Credits()
     {

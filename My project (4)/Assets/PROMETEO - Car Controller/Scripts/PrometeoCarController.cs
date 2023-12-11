@@ -497,25 +497,25 @@ public class PrometeoCarController : NetworkBehaviour
         Vector3 FLWPosition;
         frontLeftCollider.GetWorldPose(out FLWPosition, out FLWRotation);
         frontLeftMesh.transform.position = FLWPosition;
-        frontLeftMesh.transform.rotation = FLWRotation;
+        frontLeftMesh.transform.rotation = FLWRotation * Quaternion.Euler(Vector3.up*180);
 
         Quaternion FRWRotation;
         Vector3 FRWPosition;
         frontRightCollider.GetWorldPose(out FRWPosition, out FRWRotation);
         frontRightMesh.transform.position = FRWPosition;
-        frontRightMesh.transform.rotation = FRWRotation;
+        frontRightMesh.transform.rotation = FRWRotation * Quaternion.Euler(Vector3.up * 0);
 
         Quaternion RLWRotation;
         Vector3 RLWPosition;
         rearLeftCollider.GetWorldPose(out RLWPosition, out RLWRotation);
         rearLeftMesh.transform.position = RLWPosition;
-        rearLeftMesh.transform.rotation = RLWRotation;
+        rearLeftMesh.transform.rotation = RLWRotation * Quaternion.Euler(Vector3.up * 180);
 
         Quaternion RRWRotation;
         Vector3 RRWPosition;
         rearRightCollider.GetWorldPose(out RRWPosition, out RRWRotation);
         rearRightMesh.transform.position = RRWPosition;
-        rearRightMesh.transform.rotation = RRWRotation;
+        rearRightMesh.transform.rotation = RRWRotation * Quaternion.Euler(Vector3.up * 0);
       }catch(Exception ex){
         Debug.LogWarning(ex);
       }
