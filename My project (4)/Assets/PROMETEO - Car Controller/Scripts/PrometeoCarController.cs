@@ -168,6 +168,8 @@ public class PrometeoCarController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         // Check if the startPosition is assigned
         initialPosition = transform.position;
         initialRotation = transform.rotation;
@@ -277,11 +279,7 @@ public class PrometeoCarController : NetworkBehaviour
     {
         
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Load the specified scene.
-            SceneManager.LoadScene("MainMenu");
-        }
+       
 
         if (Input.GetKeyDown(KeyCode.R))
         {
