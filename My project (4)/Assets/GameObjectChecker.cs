@@ -1,57 +1,213 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Unity.UI;
+using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 
 public class GameObjectChecker : MonoBehaviour
 {
+    //public GameObject prefabToCollect;
+    //public List<GameObject> gameObjects = new List<GameObject>();
+
+    //public bool isntRunning = true;
+    //public bool Finalised = false;
+    //private float startTime;
+    //private float elapsedTime = 0.0f;
+    //public TMP_Text textMesh;
+    //public TMP_Text WontextMesh;
+    //public TMP_Text LosttextMesh;
+    //public GameObject panelWin;
+    //public GameObject panelLost;
+    //public float TargetTime;
+    //public bool Finished = false;
+
+    //void Start()
+    //{
+
+    //    GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+
+    //    foreach (GameObject go in allObjects)
+    //    {
+
+    //        if (PrefabUtility.IsPartOfPrefabInstance(go))
+    //        {
+    //            print("DONE");
+    //            GameObject prefab = PrefabUtility.GetCorrespondingObjectFromOriginalSource(go);
+
+    //            if (prefab == prefabToCollect)
+    //            {
+    //                gameObjects.Add(go);
+    //                print("Added object to gameObjects list: " + go.name);
+    //            }
+    //        }
+    //    }
+    //}
+
+
+
+    //void Update()
+    //{
+    //    if (AllGameObjectsExist() == false)
+    //    {
+    //        // Do something when none of the game objects exist
+    //        if (isntRunning)
+    //        {
+    //            startTime = Time.time;
+    //            isntRunning = false;
+    //        }
+    //        if (!AllGameObjectsNotExist())
+    //        {
+    //            textMesh.text = "Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
+    //        }
+    //    }
+
+    //    // Check if EVERY game object from the list doesn't exist
+    //    if (AllGameObjectsNotExist())
+    //    {
+    //        if (!Finalised)
+    //        {
+    //            elapsedTime += (Time.time - startTime);
+    //            textMesh.gameObject.SetActive(false);
+    //            Finalised = true;
+    //        }
+
+    //        if (elapsedTime <= TargetTime && Finished == false)
+    //        {
+    //            panelWin.SetActive(!panelWin.activeSelf);
+    //            WontextMesh.text = "Final Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
+    //            Cursor.visible = !Cursor.visible;
+    //            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+    //            Finished = true;
+    //        }
+
+    //        if (elapsedTime >= TargetTime && Finished == false)
+    //        {
+    //            panelLost.SetActive(!panelLost.activeSelf);
+    //            LosttextMesh.text = "Final Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
+    //            Cursor.visible = !Cursor.visible;
+    //            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+    //            Finished = true;
+    //        }
+    //    }
+    //}
+
+    //string FormatTimeSpan(TimeSpan timeSpan)
+    //{
+    //    return string.Format("{0:mm\\:ss\\:fff}", timeSpan);
+    //}
+
+    //bool AllGameObjectsExist()
+    //{
+    //    // Iterate through the list of game objects
+    //    foreach (GameObject obj in gameObjects)
+    //    {
+    //        // If any game object exists, return false
+    //        if (obj == null)
+    //        {
+    //            return false;
+    //        }
+    //    }
+
+    //    // If none of the game objects exist, return true
+    //    return true;
+    //}
+
+    //bool AllGameObjectsNotExist()
+    //{
+    //    // Iterate through the list of game objects
+    //    foreach (GameObject obj in gameObjects)
+    //    {
+    //        // If any game object exists, return false
+    //        if (obj != null)
+    //        {
+    //            return false;
+    //        }
+    //    }
+
+    //    // If none of the game objects exist, return true
+    //    return true;
+    //}
+    
     public GameObject[] gameObjects;
-    public string Scene;
-    public bool isRunning = false;
+
+    public bool isntRunning = true;
+    public bool Finalised = false;
     private float startTime;
     private float elapsedTime = 0.0f;
     public TMP_Text textMesh;
+    public TMP_Text WontextMesh;
+    public TMP_Text LosttextMesh;
     public GameObject panelWin;
+    public GameObject panelLost;
     public float TargetTime;
-    void FixedUpdate()
+    public bool Finished = false;
+
+    
+
+    void Update()
     {
         if (AllGameObjectsExist() == false)
         {
             // Do something when none of the game objects exist
-            if (AllGameObjectsNotExist() == false)
+            if (isntRunning)
             {
-                startTime++;
-                isRunning = true;
+                startTime = Time.time;
+                isntRunning = false;
             }
+            if (!AllGameObjectsNotExist())
+            {
+                textMesh.text = "Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
             }
+        }
         // Check if EVERY game object from the list doesn't exist
         if (AllGameObjectsNotExist())
         {
-            if (isRunning)
+            if (!Finalised)
             {
-                elapsedTime = startTime;
-                isRunning = false;
+                elapsedTime += (Time.time - startTime);
+                textMesh.gameObject.SetActive(false);
+                Finalised = true;
             }
             print(elapsedTime);
-            if (elapsedTime <= TargetTime)
+            if (elapsedTime <= TargetTime && Finished == false)
             {
 
                 // Toggle the visibility of the panel
                 panelWin.SetActive(!panelWin.activeSelf);
-
+                WontextMesh.text = "Final Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
                 Cursor.visible = !Cursor.visible;
                 Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
 
                 print(panelWin.activeSelf);   // Do something when none of the game objects exist
-                SceneManager.LoadScene(Scene);
+                Finished = true;
+            }
+
+            if (elapsedTime >= TargetTime && Finished == false)
+            {
+
+                // Toggle the visibility of the panel
+                panelLost.SetActive(!panelLost.activeSelf);
+                LosttextMesh.text = "Final Time: " + FormatTimeSpan(TimeSpan.FromSeconds(Time.time - startTime));
+                Cursor.visible = !Cursor.visible;
+                Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+
+                print(panelLost.activeSelf);   // Do something when none of the game objects exist
+                Finished = true;
             }
         }
-        textMesh.text = "Time: " + startTime;
+
+
     }
+    string FormatTimeSpan(TimeSpan timeSpan)
+    {
+        return string.Format("{0:mm\\:ss\\:fff}", timeSpan);
+    }
+
     bool AllGameObjectsExist()
     {
         // Iterate through the list of game objects
@@ -82,7 +238,7 @@ public class GameObjectChecker : MonoBehaviour
         // If none of the game objects exist, return true
         return true;
     }
-    
+
 
 
 }
