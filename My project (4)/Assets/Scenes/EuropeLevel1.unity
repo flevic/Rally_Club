@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1867.9946, g: 1688.666, b: 2359.9844, a: 1}
+  m_IndirectSpecularColor: {r: 1864.3867, g: 1689.5303, b: 2377.2383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4041,6 +4041,10 @@ PrefabInstance:
       value: LevelPicker
       objectReference: {fileID: 0}
     - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
+      propertyPath: textMesh
+      value: 
+      objectReference: {fileID: 1874967069}
+    - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
       propertyPath: gameObjects.Array.size
       value: 24
       objectReference: {fileID: 0}
@@ -5100,6 +5104,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f06407f06d8cf41b643015132cafca, type: 3}
+--- !u!114 &1874967069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2805624245385470371, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+  m_PrefabInstance: {fileID: 1808611689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1925877945
 PrefabInstance:
   m_ObjectHideFlags: 0
