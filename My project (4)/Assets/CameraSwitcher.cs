@@ -4,11 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.Rendering.LookDev;
+using System;
+
+[Serializable]
+public class CarCamera
+{
+    public bool lerp;
+    public float fov;
+    public float camDistance;
+    public float camHeight;
+    public float rotationOffset;
+    public float clippingDistance;
+}
 
 public class CameraSwitcher : MonoBehaviour
 {
     public Text textObject;
-    public Camera[] cameras;
+    private Camera camera;
+    public GameObject cameraPrefab;
+    public CarCamera[] cameraPresets;
     private int currentCameraIndex = 0;
     private string playerPrefsKey = "ActiveCameraIndex";
     public GameObject panel; // Reference to your panel GameObject
@@ -16,28 +31,13 @@ public class CameraSwitcher : MonoBehaviour
 
     void Start()
     {
-
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;   
-        
-        // Ensure at least one camera is active
-        if (cameras.Length > 0)
-        {
-            // Load the last active camera index from PlayerPrefs
-            if (PlayerPrefs.HasKey(playerPrefsKey))
-            {
-                currentCameraIndex = PlayerPrefs.GetInt(playerPrefsKey);
-            }
+        Cursor.lockState = CursorLockMode.Locked;
 
-            // Switch to the last active camera
-            SwitchCamera(currentCameraIndex);
-        }
-        else
-        {
-            Debug.LogError("No cameras attached to the object!");
-        }
 
-        
+        camera = Instantiate(cameraPrefab).GetComponent<Camera>();
+        camera.GetComponent<CameraFollow>().Init(GetComponentInParent<PrometeoCarController>().gameObject);
+        SwitchCamera(PlayerPrefs.GetInt("ActiveCameraIndex", 0));
     }
 
     void Update()
@@ -58,7 +58,10 @@ public class CameraSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V))
         {
             // Switch to the next camera
-            SwitchCamera((currentCameraIndex + 1) % cameras.Length);
+            int newIndex = currentCameraIndex + 1;
+            if(newIndex >= cameraPresets.Length) { newIndex = 0; }
+
+            SwitchCamera(newIndex);
         }
 
         // Check for the "i" key press to toggle text visibility
@@ -74,11 +77,15 @@ public class CameraSwitcher : MonoBehaviour
 
     void SwitchCamera(int newIndex)
     {
-        // Disable the current camera
-        cameras[currentCameraIndex].enabled = false;
+        camera.fieldOfView = cameraPresets[newIndex].fov;
 
-        // Enable the new camera
-        cameras[newIndex].enabled = true;
+        var camScript = camera.GetComponent<CameraFollow>();
+
+        camScript.lerp = cameraPresets[newIndex].lerp;
+        camScript.camDistance = cameraPresets[newIndex].camDistance;
+        camScript.camHeight = cameraPresets[newIndex].camHeight;
+        camScript.rotationOffset = cameraPresets[newIndex].rotationOffset;
+        camera.nearClipPlane = cameraPresets[newIndex].clippingDistance;
 
         // Update the current camera index
         currentCameraIndex = newIndex;
