@@ -1869,21 +1869,21 @@ MonoBehaviour:
   cameraPresets:
   - lerp: 1
     fov: 90
-    camDistance: 2
-    camHeight: 2
+    camDistance: 3
+    camHeight: 3
     rotationOffset: 0
     clippingDistance: 0.01
   - lerp: 1
-    fov: 90
-    camDistance: 5
-    camHeight: 5
-    rotationOffset: 0
+    fov: 60
+    camDistance: 8
+    camHeight: 10
+    rotationOffset: -20
     clippingDistance: 0.01
   - lerp: 0
-    fov: 150
-    camDistance: 0
-    camHeight: 0
-    rotationOffset: 0
+    fov: 60
+    camDistance: 1
+    camHeight: 1.5
+    rotationOffset: 20
     clippingDistance: 0.01
   panel: {fileID: 8660751405932937768}
 --- !u!1 &2963070833313290748
