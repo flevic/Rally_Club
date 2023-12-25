@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.3369, g: 325.0498, b: 430.21924, a: 1}
+  m_IndirectSpecularColor: {r: 261.8992, g: 324.44934, b: 429.4259, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35859,6 +35859,11 @@ MonoBehaviour:
   perpDirRotated: {x: -0.008578491, y: 0, z: 0.99996316}
   markerStartUVY: 0.38845444
   customPoints: []
+--- !u!1 &170641177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2507784098810561307, guid: 4fb345d9b76760341a9abd0f9ae82618, type: 3}
+  m_PrefabInstance: {fileID: 1366827586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!28 &283343131
 Texture2D:
   m_ObjectHideFlags: 0
@@ -35913,6 +35918,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3092920986466604492, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+      propertyPath: TargetTime
+      value: 5e+12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092920986466604492, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+      propertyPath: gameObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092920986466604492, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+      propertyPath: gameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 170641177}
+    - target: {fileID: 3092920986466604492, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1128009651}
+    - target: {fileID: 3092920986466604492, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1702832249}
     - target: {fileID: 8229361736263062751, guid: fb8baf1085d91c044ac0cc47e8f50d42, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -40346,6 +40371,11 @@ Transform:
   m_Father: {fileID: 527729696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1128009651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2507784098810561307, guid: 4fb345d9b76760341a9abd0f9ae82618, type: 3}
+  m_PrefabInstance: {fileID: 1933137186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1211046550
 GameObject:
   m_ObjectHideFlags: 0
@@ -42170,6 +42200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59b56944f276094782acc65af652d9e, type: 3}
+--- !u!1 &1702832249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2507784098810561307, guid: 4fb345d9b76760341a9abd0f9ae82618, type: 3}
+  m_PrefabInstance: {fileID: 1012597217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1832406346
 MonoBehaviour:
   m_ObjectHideFlags: 0

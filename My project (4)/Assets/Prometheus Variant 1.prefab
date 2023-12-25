@@ -1871,7 +1871,7 @@ MonoBehaviour:
     fov: 90
     camDistance: 3
     camHeight: 3
-    rotationOffset: 0
+    rotationOffset: -5
     clippingDistance: 0.01
   - lerp: 1
     fov: 60
@@ -1881,9 +1881,9 @@ MonoBehaviour:
     clippingDistance: 0.01
   - lerp: 0
     fov: 60
-    camDistance: 1
-    camHeight: 1.5
-    rotationOffset: 20
+    camDistance: 0.5
+    camHeight: 2
+    rotationOffset: 0
     clippingDistance: 0.01
   panel: {fileID: 8660751405932937768}
 --- !u!1 &2963070833313290748
@@ -13798,6 +13798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4471662489928999626}
   - component: {fileID: 295167097112947687}
+  - component: {fileID: 804745981955866455}
   m_Layer: 9
   m_Name: HumanPusher
   m_TagString: Player
@@ -13829,10 +13830,23 @@ CapsuleCollider:
   m_GameObject: {fileID: 6562962856471939912}
   m_Material: {fileID: 13400000, guid: 8ed0668954513ec4bafcd0e4c6dcbfbd, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 3
   m_Height: 5
   m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &804745981955866455
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6562962856471939912}
+  m_Material: {fileID: 13400000, guid: 8ed0668954513ec4bafcd0e4c6dcbfbd, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 6, z: 6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6787171949783085631
 GameObject:
@@ -15562,7 +15576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fefceefe666bb4682b272ec8c5bdd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 190
+  maxSpeed: 180
   maxReverseSpeed: 60
   accelerationMultiplier: 10
   maxSteeringAngle: 45
