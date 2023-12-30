@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
-        Debug.Log("onichan");
+      
         panel.SetActive(!panel.activeSelf);
         print(panel.activeSelf);
         Cursor.lockState = CursorLockMode.Locked;
