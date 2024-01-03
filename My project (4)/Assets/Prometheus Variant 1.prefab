@@ -16068,7 +16068,7 @@ MonoBehaviour:
   maxReverseSpeed: 60
   accelerationMultiplier: 10
   maxSteeringAngle: 45
-  steeringSpeed: 1
+  steeringSpeed: 0.93
   brakeForce: 450
   decelerationMultiplier: 2
   handbrakeDriftMultiplier: 6

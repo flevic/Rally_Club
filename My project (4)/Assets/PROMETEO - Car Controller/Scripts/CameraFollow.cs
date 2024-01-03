@@ -56,7 +56,8 @@ public class CameraFollow : MonoBehaviour
     void LerpMove()
     {
         // Set a fixed interpolation factor (adjust as needed)
-        float lerpFactor = 1f;
+        float lerpFactor = 2f;
+        float rotatelerpFactor = 0.2f;
 
         // Lerp to the target position with damping
         Vector3 targetPosition = car.position + camDirection + Vector3.up * camHeight;
@@ -64,7 +65,7 @@ public class CameraFollow : MonoBehaviour
 
         // Lerp to the target rotation with damping
         Quaternion targetRotation = Quaternion.LookRotation(car.position - transform.position) * Quaternion.Euler(Vector3.right * rotationOffset);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lerpFactor);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotatelerpFactor);
         //Lerp to the target position
         //transform.position = Vector3.Lerp(transform.position, car.position + camDirection + Vector3.up * camHeight, Time.deltaTime * 100);
 
