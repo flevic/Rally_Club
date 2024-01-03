@@ -11,6 +11,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] public float camDistance = 1;
     [SerializeField] public float rotationOffset = 0f;
     Vector3 lastVel = Vector3.forward;
+    [SerializeField] float lerpFactor = 2f;
+    [SerializeField] float rotatelerpFactor = 0.2f;
 
 
     public void Init(GameObject _car)
@@ -53,11 +55,9 @@ public class CameraFollow : MonoBehaviour
     }
 
     //Lerp car follow
-    void LerpMove()
+    public void LerpMove()
     {
-        // Set a fixed interpolation factor (adjust as needed)
-        float lerpFactor = 2f;
-        float rotatelerpFactor = 0.2f;
+        
 
         // Lerp to the target position with damping
         Vector3 targetPosition = car.position + camDirection + Vector3.up * camHeight;
