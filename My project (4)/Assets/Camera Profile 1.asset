@@ -358,7 +358,7 @@ MonoBehaviour:
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.3254717, g: 1, b: 0.9088676, a: 1}
+    m_Value: {r: 0.495283, g: 1, b: 0.9325088, a: 1}
   maxFogDistance:
     m_OverrideState: 1
     m_Value: 5000
@@ -373,13 +373,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 250
+    m_Value: 100
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 350
+    m_Value: 400
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -971,6 +971,9 @@ MonoBehaviour:
   m_PhysicallyBased:
     m_OverrideState: 1
     m_Value: 0
+  m_LimitManualRangeNearBlur:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &1112657822182073054
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1024,6 +1027,9 @@ MonoBehaviour:
     opacityA:
       m_OverrideState: 1
       m_Value: 0
+    altitude:
+      m_OverrideState: 0
+      m_Value: 2000
     rotation:
       m_OverrideState: 1
       m_Value: 0
@@ -1062,6 +1068,9 @@ MonoBehaviour:
     thickness:
       m_OverrideState: 1
       m_Value: 0.5
+    ambientProbeDimmer:
+      m_OverrideState: 0
+      m_Value: 1
     castShadows:
       m_OverrideState: 1
       m_Value: 0
@@ -1081,6 +1090,9 @@ MonoBehaviour:
     opacityA:
       m_OverrideState: 1
       m_Value: 0
+    altitude:
+      m_OverrideState: 0
+      m_Value: 2000
     rotation:
       m_OverrideState: 1
       m_Value: 0
@@ -1119,6 +1131,9 @@ MonoBehaviour:
     thickness:
       m_OverrideState: 1
       m_Value: 0.5
+    ambientProbeDimmer:
+      m_OverrideState: 0
+      m_Value: 1
     castShadows:
       m_OverrideState: 1
       m_Value: 0
@@ -1138,6 +1153,9 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 3
+  useFullACES:
+    m_OverrideState: 0
+    m_Value: 0
   toeStrength:
     m_OverrideState: 1
     m_Value: 0.087
@@ -1162,6 +1180,33 @@ MonoBehaviour:
   lutContribution:
     m_OverrideState: 1
     m_Value: 1
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  fallbackMode:
+    m_OverrideState: 0
+    m_Value: 1
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
 --- !u!114 &1701175661298016724
 MonoBehaviour:
   m_ObjectHideFlags: 3
