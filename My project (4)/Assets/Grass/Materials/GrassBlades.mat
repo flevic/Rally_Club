@@ -28,7 +28,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ADD_PRECOMPUTED_VELOCITY
   - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
@@ -50,9 +49,10 @@ Material:
     MotionVector: User
     RenderType: Transparent
   disabledShaderPasses:
-  - DecalProjectorForwardEmissive
-  - DecalMeshForwardEmissive
   - DistortionVectors
+  - DecalMeshForwardEmissive
+  - MOTIONVECTORS
+  - DecalProjectorForwardEmissive
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -247,7 +247,7 @@ Material:
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
-    - _AddPrecomputedVelocity: 1
+    - _AddPrecomputedVelocity: 0
     - _AffectAO: 0
     - _AffectAlbedo: 1
     - _AffectEmission: 0
@@ -410,7 +410,7 @@ Material:
     - _StencilRef: 0
     - _StencilRefDepth: 1
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 2
+    - _StencilRefGBuffer: 10
     - _StencilRefMV: 33
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 9

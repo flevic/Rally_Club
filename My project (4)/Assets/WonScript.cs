@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class WonScript : MonoBehaviour
 {
-    public string level;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +23,6 @@ public class WonScript : MonoBehaviour
     }
     public void MenuScene()
     {
-        PlayerPrefs.SetString("levelAt", level);
         SceneManager.LoadScene("LevelPicker");
     }
 }

@@ -7,8 +7,6 @@ public class SceneLoader1 : MonoBehaviour
 {
     // Name of the scene to load.
     public string Scene;
-
-    
     // This method gets called when something enters the trigger area.
     private void OnTriggerEnter(Collider other)
     {
