@@ -11,8 +11,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] public float camDistance = 1;
     [SerializeField] public float rotationOffset = 0f;
     Vector3 lastVel = Vector3.forward;
-    [SerializeField] float lerpFactor = 2f;
-    [SerializeField] float rotatelerpFactor = 0.2f;
+    [SerializeField] float lerpFactor = 0.1f;
+    [SerializeField] float rotatelerpFactor = 0.1f;
 
 
     public void Init(GameObject _car)
