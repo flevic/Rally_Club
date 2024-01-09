@@ -18,7 +18,8 @@ public class SettingsMenu : MonoBehaviour
     }
     public void ResetProgress()
     {
-
+        PlayerPrefs.SetString("levelAt", "LevelPicker");
+        PlayerPrefs.SetString("reset", "true");
     }
     public void Back()
     {
