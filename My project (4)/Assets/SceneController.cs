@@ -2,12 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private Button[] buttons;
+
     // Start is called before the first frame update
     public void Singleplayer()
     {
+        //Loops through all the buttons and if there is a save with their index their text gets set to the index, else text is set to "No Save".
+        //activates/deactivates the buttons based on whether they found their slot
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (SaveSystem.LoadGameIfExists(i, out GameData saveGame))
+            {
+                buttons[i].GetComponentInChildren<TMP_Text>().text = i.ToString();
+                buttons[i].interactable = true;
+            }
+            else
+            {
+                buttons[i].GetComponentInChildren<TMP_Text>().text = "No Save";
+                buttons[i].interactable = false;
+            }
+        }
+
         // Load the "GameScene" when the Start button is pressed.
         SceneManager.LoadScene("LevelPicker");
     }

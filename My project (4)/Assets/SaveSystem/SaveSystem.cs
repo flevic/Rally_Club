@@ -34,4 +34,26 @@ public static class SaveSystem
 			return new GameData();
 		}
 	}
+
+	public static bool LoadGameIfExists(int slotIndex, out GameData saveGame)
+	{
+        string path = Application.persistentDataPath + $"/gameData{slotIndex}.sus";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            GameData data = formatter.Deserialize(stream) as GameData;
+            stream.Close();
+
+			saveGame = data;
+            return true;
+        }
+        else
+        {
+            Debug.LogWarning("Save file not found in " + path + ", returning null.");
+			saveGame = null;
+            return false;
+        }
+    }
 }
