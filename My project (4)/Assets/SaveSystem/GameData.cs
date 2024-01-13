@@ -16,6 +16,17 @@ public class GameData
 	public float MusicVol = 0f;
 	public float SpeechVol = 0f;
 
+    public Dictionary<string, bool> carsUnlocked = new Dictionary<string, bool>()
+    {
+        {"BMW", true},
+        {"Audi", false}
+        
+    }; 
+
+    public int currentCarIndex = 0;
+
+
+
 	public Dictionary<string, bool> levelsDone = new Dictionary<string, bool>()
 	{
         {"LevelPicker", true},

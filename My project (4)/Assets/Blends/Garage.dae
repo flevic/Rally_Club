@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.2 commit date:2023-12-05, commit time:07:41, hash:9be62e85b727</authoring_tool>
+    </contributor>
+    <created>2024-01-13T15:42:59</created>
+    <modified>2024-01-13T15:42:59</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Wall-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">1 0.6224174 0.177786 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="GarageDoor-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.09845784 0.09845784 0.09845784 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Roof-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8000157 0.01588611 0.02508198 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Wall-material" name="Wall">
+      <instance_effect url="#Wall-effect"/>
+    </material>
+    <material id="GarageDoor-material" name="GarageDoor">
+      <instance_effect url="#GarageDoor-effect"/>
+    </material>
+    <material id="Roof-material" name="Roof">
+      <instance_effect url="#Roof-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Cone-mesh" name="Cone">
+      <mesh>
+        <source id="Cone-mesh-positions">
+          <float_array id="Cone-mesh-positions-array" count="87">0 2 -0.5 2 0 -0.5 0 -2 -0.5 -2 0 -0.5 0 0 0.5 -1.414214 0 -2.25 -1.414214 0 -0.25 0 1.414214 -2.25 0 1.414214 -0.25 0.04656177 -1.367652 -2.242579 0.04656177 -1.367652 -0.3742754 1.367652 -0.04656177 -2.242579 1.367652 -0.04656177 -0.3742754 1.414214 0 -0.25 1.414214 0 -2.25 0 -1.414214 -2.25 0 -1.414214 -0.25 1.308325 0.01276516 -0.3742754 1.308325 0.01276516 -2.242579 -0.01276516 -1.308325 -2.242579 -0.01276516 -1.308325 -0.3742754 -1.414214 0 -1.25 0 1.414214 -1.25 1.414214 0 -0.6019942 0 -1.414214 -0.6019942 1.367652 -0.04656177 -0.6604213 0.04656177 -1.367652 -0.6604213 1.308325 0.01276516 -0.6604213 -0.01276516 -1.308325 -0.6604213</float_array>
+          <technique_common>
+            <accessor source="#Cone-mesh-positions-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cone-mesh-normals">
+          <float_array id="Cone-mesh-normals-array" count="123">0.4082483 0.4082483 0.8164967 0.4082483 -0.4082483 0.8164967 0 0 -1 -0.4082483 -0.4082483 0.8164967 -0.4082483 0.4082483 0.8164967 -0.7071068 0.7071068 0 0.7071068 0.7071068 0 3.0895e-7 0 -1 -0.7071068 -0.7071068 0 0 0 1 0.7071051 -0.7071086 0 0.7070959 -0.7071176 -4.61801e-6 0.7071066 -0.707107 0 0.7071068 -0.7071068 0 -0.7071067 -0.7071068 0 2.4716e-6 0 1 0.7071068 0.7071068 0 -0.7071077 -0.7071059 0 0.7071068 -0.7071067 0 0.7071068 -0.7071069 0 0.7071081 -0.7071055 0 -0.7071067 -0.7071069 0 0.7071067 0.7071069 0 -0.7071067 0.7071069 0 0 0 -1 0.7071068 -0.7071068 0 0.7071068 0.7071068 0 -3.80246e-7 0 -1 -0.7071068 -0.7071068 0 0.7071064 -0.7071071 0 0.707105 -0.7071086 0 0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 0.7071068 0.7071069 0 -3.04197e-6 0 1 0.7071067 0.7071068 0 -0.7071059 -0.7071077 0 0.7071068 -0.7071068 0 0.7071069 -0.7071067 0 0.7071065 -0.7071071 0 -0.7071069 0.7071068 0</float_array>
+          <technique_common>
+            <accessor source="#Cone-mesh-normals-array" count="41" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Cone-mesh-map-0">
+          <float_array id="Cone-mesh-map-0-array" count="324">0.25 0.49 0.25 0.25 0.49 0.25 0.49 0.25 0.25 0.25 0.25 0.00999999 0.99 0.25 0.51 0.25 0.75 0.49 0.25 0.00999999 0.25 0.25 0.00999999 0.25 0.00999999 0.25 0.25 0.25 0.25 0.49 0.625 0 0.5 0.25 0.5 0 0.625 0.25 0.5 0.5 0.5 0.25 0.6167689 0.741769 0.616769 0.5082311 0.616769 0.5082311 0.5 0.75 0.625 1 0.5 1 0.375 0.5 0.125 0.75 0.125 0.5 0.875 0.5 0.625 0.75 0.625 0.5 0.5 0.5082311 0.375 0.5 0.5 0.5 0.383231 0.7417689 0.375 0.5 0.383231 0.5082311 0.616769 0.5082311 0.625 0.75 0.6167689 0.741769 0.6167689 0.741769 0.5 0.75 0.5 0.741769 0.616769 0.5082311 0.5 0.741769 0.5 0.5082311 0.616769 0.5082311 0.5 0.5082311 0.5 0.5082311 0.383231 0.7417689 0.5 0.741769 0.5 0.741769 0.383231 0.5082311 0.383231 0.7417689 0.383231 0.7417689 0.5 0.741769 0.6167689 0.741769 0.6167689 0.741769 0.5 0.5082311 0.383231 0.5082311 0.383231 0.5082311 0.5 0.5082311 0.383231 0.7417689 0.383231 0.5082311 0.5 0.741769 0.375 0.75 0.383231 0.7417689 0.616769 0.5082311 0.5 0.5 0.625 0.5 0.375 0.75 0.5 1 0.375 1 0.5 0.25 0.375 0.5 0.375 0.25 0.5 0 0.375 0.25 0.375 0 0.5 0.741769 0.5 0.5082311 0.5 0.5082311 0.5 0.741769 0.616769 0.5082311 0.6167689 0.741769 0.99 0.25 0.75 0.00999999 0.51 0.25 0.625 0 0.625 0.25 0.5 0.25 0.625 0.25 0.625 0.5 0.5 0.5 0.6167689 0.741769 0.6167689 0.741769 0.616769 0.5082311 0.5 0.75 0.625 0.75 0.625 1 0.375 0.5 0.375 0.75 0.125 0.75 0.875 0.5 0.875 0.75 0.625 0.75 0.5 0.5082311 0.383231 0.5082311 0.375 0.5 0.383231 0.7417689 0.375 0.75 0.375 0.5 0.616769 0.5082311 0.625 0.5 0.625 0.75 0.6167689 0.741769 0.625 0.75 0.5 0.75 0.616769 0.5082311 0.6167689 0.741769 0.5 0.741769 0.616769 0.5082311 0.616769 0.5082311 0.5 0.5082311 0.383231 0.7417689 0.383231 0.7417689 0.5 0.741769 0.383231 0.5082311 0.383231 0.5082311 0.383231 0.7417689 0.5 0.741769 0.5 0.741769 0.6167689 0.741769 0.5 0.5082311 0.5 0.5082311 0.383231 0.5082311 0.5 0.5082311 0.5 0.741769 0.383231 0.7417689 0.5 0.741769 0.5 0.75 0.375 0.75 0.616769 0.5082311 0.5 0.5082311 0.5 0.5 0.375 0.75 0.5 0.75 0.5 1 0.5 0.25 0.5 0.5 0.375 0.5 0.5 0 0.5 0.25 0.375 0.25 0.5 0.741769 0.5 0.741769 0.5 0.5082311 0.5 0.741769 0.5 0.5082311 0.616769 0.5082311</float_array>
+          <technique_common>
+            <accessor source="#Cone-mesh-map-0-array" count="162" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Cone-mesh-vertices">
+          <input semantic="POSITION" source="#Cone-mesh-positions"/>
+        </vertices>
+        <triangles material="Wall-material" count="48">
+          <input semantic="VERTEX" source="#Cone-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cone-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cone-mesh-map-0" offset="2" set="0"/>
+          <p>1 2 6 3 2 7 0 2 8 6 5 15 22 5 16 21 5 17 8 6 18 23 6 19 22 6 20 10 7 21 17 7 22 12 7 23 24 8 24 6 8 25 21 8 26 14 2 27 5 2 28 7 2 29 8 9 30 16 9 31 13 9 32 25 10 33 14 10 34 23 10 35 9 11 36 14 11 37 11 11 38 12 12 39 16 12 40 10 12 41 10 13 42 24 13 43 26 13 44 17 13 45 28 13 46 27 13 47 12 14 48 27 14 49 25 14 50 9 6 51 28 6 52 26 6 53 11 15 54 19 15 55 9 15 56 26 16 57 20 16 58 10 16 59 25 17 60 18 17 61 11 17 62 26 19 66 15 19 67 9 19 68 12 20 69 23 20 70 13 20 71 15 21 72 21 21 73 5 21 74 22 22 75 14 22 76 7 22 77 21 23 78 7 23 79 5 23 80 26 24 81 27 24 82 25 24 83 26 25 84 12 25 85 10 25 86 1 2 87 2 2 88 3 2 89 6 5 90 8 5 91 22 5 92 8 26 93 13 26 94 23 26 95 10 27 96 20 27 97 17 27 98 24 28 99 16 28 100 6 28 101 14 2 102 15 2 103 5 2 104 8 9 105 6 9 106 16 9 107 25 29 108 11 29 109 14 29 110 9 30 111 15 30 112 14 30 113 12 18 114 13 18 115 16 18 116 10 31 117 16 31 118 24 31 119 17 25 120 20 25 121 28 25 122 12 32 123 17 32 124 27 32 125 9 33 126 19 33 127 28 33 128 11 34 129 18 34 130 19 34 131 26 35 132 28 35 133 20 35 134 25 36 135 27 36 136 18 36 137 26 38 141 24 38 142 15 38 143 12 39 144 25 39 145 23 39 146 15 28 147 24 28 148 21 28 149 22 26 150 23 26 151 14 26 152 21 40 153 22 40 154 7 40 155 26 2 156 28 2 157 27 2 158 26 13 159 25 13 160 12 13 161</p>
+        </triangles>
+        <triangles material="GarageDoor-material" count="2">
+          <input semantic="VERTEX" source="#Cone-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cone-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cone-mesh-map-0" offset="2" set="0"/>
+          <p>27 18 63 19 18 64 18 18 65 27 37 138 28 37 139 19 37 140</p>
+        </triangles>
+        <triangles material="Roof-material" count="4">
+          <input semantic="VERTEX" source="#Cone-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Cone-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Cone-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 4 0 1 1 0 2 1 1 3 4 1 4 2 1 5 2 3 9 4 3 10 3 3 11 3 4 12 4 4 13 0 4 14</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Cone" name="Cone" type="NODE">
+        <matrix sid="transform">0.7071068 -0.7071068 0 0 0.7071068 0.7071068 0 0 0 0 1 2.25 0 0 0 1</matrix>
+        <instance_geometry url="#Cone-mesh" name="Cone">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Wall-material" target="#Wall-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="GarageDoor-material" target="#GarageDoor-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Roof-material" target="#Roof-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
