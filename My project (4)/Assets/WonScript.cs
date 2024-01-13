@@ -15,8 +15,9 @@ public class WonScript : MonoBehaviour
     }
     public void MenuScene()
     {
-    PlayerPrefs.SetString("levelAt", level);
-    SceneManager.LoadScene("LevelPicker");
+        SaveManager.instance.data.levelsDone[level] = true;
+        SaveSystem.SaveGame(SaveManager.instance.data.currentSaveSlot);
+        SceneManager.LoadScene("LevelPicker");
     }
 
 }

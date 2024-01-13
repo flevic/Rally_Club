@@ -39,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        SaveSystem.SaveGame(SaveManager.instance.data.currentSaveSlot);
         SceneManager.LoadScene("MainMenu");
     }
     public void Restart()

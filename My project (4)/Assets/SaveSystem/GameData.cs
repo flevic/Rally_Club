@@ -9,16 +9,19 @@ public class GameData
 
 	//Controls
 	public float MouseSensitivity = 1.5f;
-
+	public int currentSaveSlot;
 	//Audio
 	public float MasterVol = -15f;
 	public float SfxVol = 0f;
 	public float MusicVol = 0f;
 	public float SpeechVol = 0f;
 
-	public Dictionary<string, bool> levelsStatus = new Dictionary<string, bool>()
+	public Dictionary<string, bool> levelsDone = new Dictionary<string, bool>()
 	{
-		{"Level1", false},
-		{"Level2", false}
-	};
+        {"LevelPicker", true},
+        {"Level1", false},
+		{"Level2", false},
+        {"Level3", false},
+        {"Level4", false}
+    };
 }
