@@ -26,13 +26,12 @@ public class CameraSwitcher : MonoBehaviour
     public CarCamera[] cameraPresets;
     private int currentCameraIndex = 0;
     private string playerPrefsKey = "ActiveCameraIndex";
-    public GameObject panel; // Reference to your panel GameObject
+    
     
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        
 
 
         camera = Instantiate(cameraPrefab).GetComponent<Camera>();
@@ -42,17 +41,7 @@ public class CameraSwitcher : MonoBehaviour
 
     void Update()
     {
-        // Check if the escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // Toggle the visibility of the panel
-            panel.SetActive(!panel.activeSelf);
-            
-            Cursor.visible = !Cursor.visible;
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
-
-            print(panel.activeSelf);
-        }
+        
 
         // Check for the "v" key press to switch cameras
         if (Input.GetKeyDown(KeyCode.V))
