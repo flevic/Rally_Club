@@ -913,6 +913,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
+      propertyPath: Timed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3559088370003246082, guid: 78d092cdbd7d16348a0c147f6948be70, type: 3}
       propertyPath: panelWin
       value: 
       objectReference: {fileID: 795631533}

@@ -9,6 +9,7 @@ public class LevelLoader : MonoBehaviour
 
     public void Start()
     {
+        print(SaveManager.instance.data.levelsDone[ToUnlock]);
         childObject = transform.GetChild(0).gameObject;
         if (SaveManager.instance.data.levelsDone[ToUnlock] == true)
         {

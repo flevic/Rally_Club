@@ -1034,8 +1034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GarageIndex: 0
   cars:
-  - {fileID: 1817154472}
   - {fileID: 377060911}
+  - {fileID: 1817154472}
   unlocked: 0
   confirm: {fileID: 1011453925}
 --- !u!1 &1094743345
