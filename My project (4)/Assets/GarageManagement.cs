@@ -16,6 +16,8 @@ public class GarageManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Vector3 dropPosition = new Vector3(0f, 5f, 0f);
         GarageIndex = SaveManager.instance.data.currentCarIndex;
         cars[GarageIndex].transform.position = dropPosition;
@@ -51,6 +53,8 @@ public class GarageManagement : MonoBehaviour
     {
         SaveManager.instance.data.currentCarIndex = GarageIndex;
         SaveSystem.SaveGame(SaveManager.instance.data.currentSaveSlot);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene("LevelPicker");
     }
 
