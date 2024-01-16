@@ -1235,7 +1235,7 @@ MonoBehaviour:
   brakeForce: 450
   decelerationMultiplier: 2
   handbrakeDriftMultiplier: 6
-  bodyMassCenter: {x: 0, y: 0.05, z: 0}
+  bodyMassCenter: {x: 0, y: 0.1, z: 0}
   frontLeftMesh: {fileID: 4062923164624020274}
   frontLeftCollider: {fileID: 6039637828415289632}
   frontRightMesh: {fileID: 2939052101856687455}
