@@ -35,8 +35,8 @@ MonoBehaviour:
     supportTransparentDepthPostpass: 1
     colorBufferFormat: 74
     supportCustomPass: 1
-    customBufferFormat: 8
-    supportedLitShaderMode: 2
+    customBufferFormat: 12
+    supportedLitShaderMode: 1
     planarReflectionResolution:
       m_Values: 400000008000000000010000
       m_SchemaId:
@@ -122,7 +122,7 @@ MonoBehaviour:
       maxDirectionalShadowMapResolution: 1024
       maxPunctualShadowMapResolution: 1024
       maxAreaShadowMapResolution: 1024
-      supportScreenSpaceShadows: 0
+      supportScreenSpaceShadows: 1
       maxScreenSpaceShadowSlots: 4
       screenSpaceShadowBufferFormat: 48
     decalSettings:
@@ -135,18 +135,18 @@ MonoBehaviour:
       lutFormat: 48
       bufferFormat: 74
     dynamicResolutionSettings:
-      enabled: 0
-      useMipBias: 0
-      enableDLSS: 0
-      DLSSPerfQualitySetting: 0
-      DLSSInjectionPoint: 0
+      enabled: 1
+      useMipBias: 1
+      enableDLSS: 1
+      DLSSPerfQualitySetting: 3
+      DLSSInjectionPoint: 2
       DLSSUseOptimalSettings: 1
       DLSSSharpness: 0.5
       fsrOverrideSharpness: 0
       fsrSharpness: 0.92
       maxPercentage: 100
       minPercentage: 100
-      dynResType: 1
+      dynResType: 0
       upsampleFilter: 1
       forceResolution: 0
       forcedPercentage: 100
@@ -183,7 +183,7 @@ MonoBehaviour:
       ChromaticAberrationMaxSamples: 03000000060000000c000000
     lightSettings:
       useContactShadow:
-        m_Values: 010000
+        m_Values: 010101
         m_SchemaId:
           m_Id: With3Levels
     maximumLODLevel:
