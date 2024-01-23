@@ -9,7 +9,7 @@ using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Relay : MonoBehaviour
 {
     public InputField inputField;
@@ -24,6 +24,11 @@ public class Relay : MonoBehaviour
             Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
         };
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+    }
+    public void NetLoadScene(string sceneName)
+    {
+
+        NetworkManager.Singleton.SceneManager.LoadScene("GermanyMultiplayer", LoadSceneMode.Single);
     }
 
     private async void CreateRelay()
@@ -63,6 +68,12 @@ public class Relay : MonoBehaviour
         }
     }
 
+    public void NormalLoad(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
+    }
+
     public void Join()
     {
         JoinRelay(inputField.transform.GetChild(2).GetComponent<Text>().text);
@@ -72,4 +83,5 @@ public class Relay : MonoBehaviour
     {
         CreateRelay();
     }
+
 }
